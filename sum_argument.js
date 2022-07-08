@@ -11,6 +11,16 @@ const sum=(...argument)=>{
 }
 describe("It show sum function ",()=>{
     test('call sum with no argument', () => { 
-        except(sum(2)).toBe("sum fun invoked with no argument")
+        expect(sum()).toBe("sum fun invoked with no argument")
+     })
+     test("call with one argumengt",()=>{
+        expect(sum(1)).toBe("You have taken one argument")
+     })
+     test("argument have string",()=>{
+        expect(sum("2","3")).toBe(5)
+     })
+     test("call with floating value",()=>{
+        expect(sum(1.3,2.3)).toBe(3.6)
+
      })
 })
